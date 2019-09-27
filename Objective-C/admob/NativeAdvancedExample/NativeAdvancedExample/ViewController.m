@@ -42,7 +42,7 @@ static NSString *const TestAdUnit = @"ca-app-pub-3940256099942544/3986624511";
   NSArray *nibObjects =
       [[NSBundle mainBundle] loadNibNamed:@"UnifiedNativeAdView" owner:nil options:nil];
   [self setAdView:[nibObjects firstObject]];
-  [self refreshAd:nil];
+  //[self refreshAd:nil];
 }
 
 - (IBAction)refreshAd:(id)sender {

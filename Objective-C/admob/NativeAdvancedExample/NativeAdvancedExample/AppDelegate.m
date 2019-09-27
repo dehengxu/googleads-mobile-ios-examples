@@ -19,6 +19,7 @@
 #import <GoogleMobileAds/GoogleMobileAds.h>
 
 @interface AppDelegate ()
+@property (nonatomic, strong) NSURLSessionDownloadTask *downloadTask;
 
 @end
 
@@ -28,8 +29,24 @@
     didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   // Initialize Google Mobile Ads SDK
   [[GADMobileAds sharedInstance] startWithCompletionHandler:nil];
-
+  [self startHttpFetch];
   return YES;
+}
+
+- (void)startHttpFetch {
+    NSURL *URL = [NSURL URLWithString:@"https://www.doubleclick.net"];
+    
+    self.downloadTask = [[NSURLSession sharedSession] downloadTaskWithURL:URL completionHandler:^(NSURL * _Nullable location, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+      if (error) {
+        NSLog(@"error :%@", error);
+        return;
+      }
+      
+      NSLog(@"location :%@, countOfBytesReceived :%lld", location, self.downloadTask.countOfBytesReceived);
+      
+    }];
+    [self.downloadTask resume];
+    
 }
 
 @end

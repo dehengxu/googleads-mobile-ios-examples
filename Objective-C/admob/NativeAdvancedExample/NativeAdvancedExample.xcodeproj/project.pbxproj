@@ -14,9 +14,12 @@
 		CF9335C81B26706400DEF1B4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF9335C71B26706400DEF1B4 /* Images.xcassets */; };
 		CF9335CB1B26706400DEF1B4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF9335C91B26706400DEF1B4 /* LaunchScreen.xib */; };
 		CF9335EC1B26715A00DEF1B4 /* UnifiedNativeAdView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF9335E61B26715A00DEF1B4 /* UnifiedNativeAdView.xib */; };
+		F3E66B3CD9757B80D5131C8E /* libPods-NativeAdvancedExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 696EA320AD0407B4E2DF8B46 /* libPods-NativeAdvancedExample.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		090CFEA8E2275E6D157121BF /* Pods-NativeAdvancedExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NativeAdvancedExample.release.xcconfig"; path = "Target Support Files/Pods-NativeAdvancedExample/Pods-NativeAdvancedExample.release.xcconfig"; sourceTree = "<group>"; };
+		696EA320AD0407B4E2DF8B46 /* libPods-NativeAdvancedExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NativeAdvancedExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF9335B71B26706400DEF1B4 /* NativeAdvancedExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NativeAdvancedExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF9335BB1B26706400DEF1B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF9335BC1B26706400DEF1B4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -28,6 +31,7 @@
 		CF9335C71B26706400DEF1B4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CF9335CA1B26706400DEF1B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		CF9335E71B26715A00DEF1B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/UnifiedNativeAdView.xib; sourceTree = "<group>"; };
+		D22A1D3E8C95E3049146B68F /* Pods-NativeAdvancedExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NativeAdvancedExample.debug.xcconfig"; path = "Target Support Files/Pods-NativeAdvancedExample/Pods-NativeAdvancedExample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +39,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3E66B3CD9757B80D5131C8E /* libPods-NativeAdvancedExample.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2213AE619004E06F206F920D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				696EA320AD0407B4E2DF8B46 /* libPods-NativeAdvancedExample.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CF9335AE1B26706400DEF1B4 = {
 			isa = PBXGroup;
 			children = (
 				CF9335B91B26706400DEF1B4 /* NativeAdvancedExample */,
 				CF9335B81B26706400DEF1B4 /* Products */,
+				F0F2D530B3F05182E671A2C6 /* Pods */,
+				2213AE619004E06F206F920D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,6 +97,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F0F2D530B3F05182E671A2C6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D22A1D3E8C95E3049146B68F /* Pods-NativeAdvancedExample.debug.xcconfig */,
+				090CFEA8E2275E6D157121BF /* Pods-NativeAdvancedExample.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -89,6 +113,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CF9335DA1B26706400DEF1B4 /* Build configuration list for PBXNativeTarget "NativeAdvancedExample" */;
 			buildPhases = (
+				008E18F1D5169F09BBEEE5D5 /* [CP] Check Pods Manifest.lock */,
 				CF9335B31B26706400DEF1B4 /* Sources */,
 				CF9335B41B26706400DEF1B4 /* Frameworks */,
 				CF9335B51B26706400DEF1B4 /* Resources */,
@@ -113,6 +138,7 @@
 				TargetAttributes = {
 					CF9335B61B26706400DEF1B4 = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = 375GT6S3QN;
 					};
 				};
 			};
@@ -121,6 +147,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -147,6 +174,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		008E18F1D5169F09BBEEE5D5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NativeAdvancedExample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CF9335B31B26706400DEF1B4 /* Sources */ = {
@@ -280,8 +332,10 @@
 		};
 		CF9335DB1B26706400DEF1B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D22A1D3E8C95E3049146B68F /* Pods-NativeAdvancedExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 375GT6S3QN;
 				INFOPLIST_FILE = NativeAdvancedExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -292,8 +346,10 @@
 		};
 		CF9335DC1B26706400DEF1B4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 090CFEA8E2275E6D157121BF /* Pods-NativeAdvancedExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 375GT6S3QN;
 				INFOPLIST_FILE = NativeAdvancedExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
