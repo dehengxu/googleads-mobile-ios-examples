@@ -15,7 +15,11 @@
 #import "ViewController.h"
 
 // Native Advanced ad unit ID for testing.
-static NSString *const TestAdUnit = @"ca-app-pub-3940256099942544/3986624511";
+static NSString *const TestAdUnit =
+//@"ca-app-pub-3940256099942544/3986624511"; // Testing
+@"ca-app-pub-5864532115280138/2772526471"; // IPIC
+
+//static NSString *const IPICAdUnit = @"ca-app-pub-5864532115280138/2772526471";
 
 @interface ViewController () <GADUnifiedNativeAdLoaderDelegate,
                               GADVideoControllerDelegate,
@@ -42,7 +46,7 @@ static NSString *const TestAdUnit = @"ca-app-pub-3940256099942544/3986624511";
   NSArray *nibObjects =
       [[NSBundle mainBundle] loadNibNamed:@"UnifiedNativeAdView" owner:nil options:nil];
   [self setAdView:[nibObjects firstObject]];
-  //[self refreshAd:nil];
+  [self refreshAd:nil];
 }
 
 - (IBAction)refreshAd:(id)sender {
@@ -54,7 +58,7 @@ static NSString *const TestAdUnit = @"ca-app-pub-3940256099942544/3986624511";
 
   self.adLoader = [[GADAdLoader alloc] initWithAdUnitID:TestAdUnit
                                      rootViewController:self
-                                                adTypes:@[ kGADAdLoaderAdTypeUnifiedNative ]
+                                                adTypes:@[ kGADAdLoaderAdTypeUnifiedNative, kGADAdLoaderAdTypeNativeCustomTemplate ]
                                                 options:@[ videoOptions ]];
   self.adLoader.delegate = self;
   [self.adLoader loadRequest:[GADRequest request]];
